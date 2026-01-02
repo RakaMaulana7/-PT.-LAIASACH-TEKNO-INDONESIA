@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="icon" type="image/svg+xml" href="asset/image.png" />
+  <title>PT. Laiasach Tekno Indonesia</title>
+  <meta name="description" content="PT. Laiasach Tekno Indonesia - Solusi lengkap kelistrikan industri, pemeliharaan transformator, instalasi panel, dan instalasi tegangan menengah">
+  <meta name="keywords" content="electrical, transformator, panel listrik, instalasi industri, surabaya">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#e6f7ff',
+              100: '#bae7ff',
+              200: '#91d5ff',
+              300: '#69c0ff',
+              400: '#40a9ff',
+              500: '#1890ff',
+              600: '#096dd9',
+              700: '#0050b3',
+              800: '#003a8c',
+              900: '#002766',
+            },
+            accent: {
+              500: '#ff6b35',
+              600: '#ff5722',
+            },
+            dark: {
+              800: '#1a1a2e',
+              900: '#0f0f1e',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+            'medium': '0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.08)',
+            'strong': '0 10px 40px -10px rgba(0, 0, 0, 0.2), 0 20px 50px -10px rgba(0, 0, 0, 0.15)',
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Smooth Animations */
+    * {
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #1890ff 0%, #096dd9 100%);
+      border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #40a9ff 0%, #1890ff 100%);
+    }
+
+    /* Hero Gradient Overlay */
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(15, 15, 30, 0.9) 50%, rgba(0, 80, 179, 0.85) 100%);
+    }
+
+    /* Animated Background Pattern */
+    .bg-pattern {
+      background-image: 
+        linear-gradient(30deg, rgba(24, 144, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(24, 144, 255, 0.03) 87.5%, rgba(24, 144, 255, 0.03)),
+        linear-gradient(150deg, rgba(24, 144, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(24, 144, 255, 0.03) 87.5%, rgba(24, 144, 255, 0.03)),
+        linear-gradient(30deg, rgba(24, 144, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(24, 144, 255, 0.03) 87.5%, rgba(24, 144, 255, 0.03)),
+        linear-gradient(150deg, rgba(24, 144, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(24, 144, 255, 0.03) 87.5%, rgba(24, 144, 255, 0.03));
+      background-size: 80px 140px;
+      background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+    }
+
+    /* Glass Effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Button Hover Effects */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+      transition: left 0.3s ease;
+    }
+
+    .btn-primary:hover::before {
+      left: 0;
+    }
+
+    .btn-primary span {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Service Card Hover */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-12px);
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(24, 144, 255, 0.05) 0%, rgba(9, 109, 217, 0.05) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 1rem;
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Icon Float Animation */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Pulse Animation */
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.8);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.3);
+        opacity: 0;
+      }
+    }
+
+    .pulse-ring {
+      animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    /* Mobile Menu Slide */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    /* Stats Counter Animation */
+    .stats-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stats-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .stats-card:hover::after {
+      left: 100%;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header/Navigation -->
+  <header id="header" class="fixed w-full top-0 z-50 transition-all duration-500">
+    <nav class="container mx-auto px-4 lg:px-8 xl:px-12">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="relative w-12 h-12 flex-shrink-0">
+            <img src="asset/image.png" 
+                alt="Logo" 
+                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+          </div>
+
+          <div class="leading-tight">
+            <div class="text-white font-bold text-xl tracking-tight">
+              PT. LAIASACH TEKNO INDONESIA
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center space-x-1">
+          <a href="index.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Home</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="About.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>About</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Services.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Services</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Portfolio.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Portfolio</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Team.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Team</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Contact.html" class="ml-4 px-6 py-2.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+            Contact Us
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
+          <i class="bi bi-list text-white text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl z-50 lg:hidden">
+      <div class="p-6">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="text-xl font-bold text-gray-900">Menu</h3>
+          <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="bi bi-x text-gray-900 text-3xl"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col space-y-2">
+          <a href="index.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="About.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">About</a>
+          <a href="Services.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Services</a>
+          <a href="Portfolio.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Portfolio</a>
+          <a href="Team.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Team</a>
+          <a href="Contact.html" class="mt-4 px-4 py-3 bg-primary-500 text-white text-center font-semibold rounded-lg hover:bg-primary-600 transition-colors">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden pt-20">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&h=1080&fit=crop&q=80" 
+             alt="Our Services" 
+             class="w-full h-full object-cover">
+        <div class="hero-gradient absolute inset-0"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10 py-20">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6" data-aos="fade-up">
+            <i class="bi bi-gear text-primary-300"></i>
+            <span class="text-primary-200 text-sm font-semibold tracking-wide">Our Services</span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+            Layanan Electrical Engineering
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-500">
+              Profesional
+            </span>
+          </h1>
+          
+          <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            Solusi lengkap untuk semua kebutuhan electrical dan mechanical industri Anda dengan standar internasional
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+            Tiga Pilar
+            <span class="gradient-text">Layanan Kami</span>
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Kami menyediakan tiga kategori layanan utama yang mencakup seluruh kebutuhan electrical engineering industri Anda
+          </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8">
+          <!-- Service Overview 1 -->
+          <div class="group bg-gradient-to-br from-primary-50 to-white rounded-3xl p-8 border-2 border-primary-100 hover:border-primary-300 shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative mb-6">
+              <div class="absolute inset-0 bg-primary-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+              <div class="relative w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center float-animation">
+                <i class="bi bi-cpu text-white text-4xl"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 mb-3">Transformator Services</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Layanan lengkap pemeliharaan dan pengadaan transformator dengan teknologi terkini.
+            </p>
+            <div class="flex items-center text-primary-600 font-semibold group-hover:translate-x-2 transition-transform">
+              <span>Pelajari Lebih Lanjut</span>
+              <i class="bi bi-arrow-right ml-2"></i>
+            </div>
+          </div>
+
+          <!-- Service Overview 2 -->
+          <div class="group bg-gradient-to-br from-primary-50 to-white rounded-3xl p-8 border-2 border-primary-100 hover:border-primary-300 shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative mb-6">
+              <div class="absolute inset-0 bg-primary-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+              <div class="relative w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center float-animation" style="animation-delay: 1s;">
+                <i class="bi bi-diagram-3 text-white text-4xl"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 mb-3">Panel Listrik</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Desain, perakitan, dan maintenance panel listrik sesuai standar industri internasional.
+            </p>
+            <div class="flex items-center text-primary-600 font-semibold group-hover:translate-x-2 transition-transform">
+              <span>Pelajari Lebih Lanjut</span>
+              <i class="bi bi-arrow-right ml-2"></i>
+            </div>
+          </div>
+
+          <!-- Service Overview 3 -->
+          <div class="group bg-gradient-to-br from-primary-50 to-white rounded-3xl p-8 border-2 border-primary-100 hover:border-primary-300 shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative mb-6">
+              <div class="absolute inset-0 bg-primary-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+              <div class="relative w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center float-animation" style="animation-delay: 2s;">
+                <i class="bi bi-lightning-charge text-white text-4xl"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 mb-3">Instalasi Industri</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Instalasi kelistrikan lengkap dengan sistem tegangan rendah hingga menengah 20 kV.
+            </p>
+            <div class="flex items-center text-primary-600 font-semibold group-hover:translate-x-2 transition-transform">
+              <span>Pelajari Lebih Lanjut</span>
+              <i class="bi bi-arrow-right ml-2"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Detail 1: Transformator -->
+    <section id="transformator" class="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <!-- Image -->
+            <div data-aos="fade-right">
+              <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl blur-3xl opacity-20"></div>
+                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop&q=80" 
+                     alt="Transformator Services" 
+                     class="relative rounded-3xl shadow-2xl w-full">
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div data-aos="fade-left">
+              <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-4">
+                <i class="bi bi-cpu text-primary-600"></i>
+                <span class="text-primary-700 text-sm font-semibold">Service #1</span>
+              </div>
+              
+              <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-6">
+                Pemeliharaan & Pengadaan
+                <span class="gradient-text">Transformator</span>
+              </h2>
+              
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Kami menyediakan layanan lengkap untuk pemeliharaan dan pengadaan transformator dengan teknologi terkini dan tenaga ahli berpengalaman. Setiap pekerjaan dilakukan dengan presisi tinggi untuk memastikan performa optimal sistem kelistrikan Anda.
+              </p>
+
+              <div class="space-y-3">
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Treatment/Purifying Oli Transformator</h4>
+                    <p class="text-sm text-gray-600">Pembersihan dan pemurnian oli untuk menjaga kualitas isolasi</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Penggulungan/Rewinding Koil</h4>
+                    <p class="text-sm text-gray-600">Rewinding koil transformator dengan presisi tinggi</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Penggantian Oli & Komponen</h4>
+                    <p class="text-sm text-gray-600">Penggantian dan penambahan oli, bushing, packing</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Pengadaan Transformator Baru</h4>
+                    <p class="text-sm text-gray-600">Supply transformator baru dengan berbagai kapasitas</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sub Services Grid -->
+          <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up">
+            <div class="service-detail-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <i class="bi bi-droplet-fill text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="font-display font-bold text-gray-900 mb-2">Oil Treatment</h4>
+              <p class="text-sm text-gray-600">Purifikasi oli dengan teknologi vakum untuk hasil optimal</p>
+            </div>
+
+            <div class="service-detail-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <i class="bi bi-circle-square text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="font-display font-bold text-gray-900 mb-2">Coil Rewinding</h4>
+              <p class="text-sm text-gray-600">Rewinding presisi dengan material berkualitas tinggi</p>
+            </div>
+
+            <div class="service-detail-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <i class="bi bi-box-seam text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="font-display font-bold text-gray-900 mb-2">Parts Supply</h4>
+              <p class="text-sm text-gray-600">Pengadaan komponen original dengan garansi resmi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Detail 2: Panel Listrik -->
+    <section id="panel" class="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <!-- Content -->
+            <div data-aos="fade-right">
+              <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-4">
+                <i class="bi bi-diagram-3 text-primary-600"></i>
+                <span class="text-primary-700 text-sm font-semibold">Service #2</span>
+              </div>
+              
+              <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-6">
+                Pemeliharaan & Pengadaan
+                <span class="gradient-text">Panel Listrik</span>
+              </h2>
+              
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Kami mendesain, merakit, dan melakukan pemeliharaan berbagai jenis panel listrik sesuai standar industri. Setiap panel dibuat dengan komponen berkualitas tinggi dan sistem proteksi yang handal.
+              </p>
+
+              <div class="space-y-3">
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Panel MDP & SDP</h4>
+                    <p class="text-sm text-gray-600">Main & Sub Distribution Panel untuk distribusi daya</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Panel ATS & AMF</h4>
+                    <p class="text-sm text-gray-600">Automatic Transfer Switch & Main Failure system</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Panel Capacitor Bank</h4>
+                    <p class="text-sm text-gray-600">Koreksi faktor daya untuk efisiensi energi</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Panel Cubicle & Troubleshooting</h4>
+                    <p class="text-sm text-gray-600">Cubicle medium voltage dan layanan reparasi</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div data-aos="fade-left">
+              <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl blur-3xl opacity-20"></div>
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop&q=80" 
+                     alt="Panel Listrik Services" 
+                     class="relative rounded-3xl shadow-2xl w-full">
+              </div>
+            </div>
+          </div>
+
+          <!-- Sub Services Grid -->
+          <div class="grid md:grid-cols-4 gap-6" data-aos="fade-up">
+            <div class="service-detail-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <i class="bi bi-grid-3x3 text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="font-display font-bold text-gray-900 mb-2 text-sm">Distribution Panel</h4>
+              <p class="text-xs text-gray-600">MDP, SDP, LVMDP</p>
+            </div>
+
+            <div class="service-detail-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <i class="bi bi-shuffle text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="font-display font-bold text-gray-900 mb-2 text-sm">Auto Transfer</h4>
+              <p class="text-xs text-gray-600">ATS & AMF System</p>
+            </div>
+
+            <div class="service-detail-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <i class="bi bi-battery-charging text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="font-display font-bold text-gray-900 mb-2 text-sm">Capacitor Bank</h4>
+              <p class="text-xs text-gray-600">Power Factor Correction</p>
+            </div>
+
+            <div class="service-detail-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <i class="bi bi-wrench text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="font-display font-bold text-gray-900 mb-2 text-sm">Maintenance</h4>
+              <p class="text-xs text-gray-600">Troubleshooting & Repair</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Detail 3: Instalasi -->
+    <section id="instalasi" class="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <!-- Image -->
+            <div data-aos="fade-right">
+              <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl blur-3xl opacity-20"></div>
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80" 
+                     alt="Instalasi Services" 
+                     class="relative rounded-3xl shadow-2xl w-full">
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div data-aos="fade-left">
+              <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-4">
+                <i class="bi bi-lightning-charge text-primary-600"></i>
+                <span class="text-primary-700 text-sm font-semibold">Service #3</span>
+              </div>
+              
+              <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-6">
+                Instalasi
+                <span class="gradient-text">Industri</span>
+              </h2>
+              
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Layanan instalasi kelistrikan lengkap untuk gedung, pabrik, dan fasilitas industri. Kami menangani instalasi dari tegangan rendah hingga tegangan menengah 20 kV dengan standar keamanan tertinggi.
+              </p>
+
+              <div class="space-y-3">
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Instalasi Gedung & Pabrik</h4>
+                    <p class="text-sm text-gray-600">Instalasi lengkap untuk bangunan komersial dan industri</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Instalasi Tegangan Menengah 20 kV</h4>
+                    <p class="text-sm text-gray-600">Medium voltage installation dengan standar PLN</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Jointing Kabel 20 kV</h4>
+                    <p class="text-sm text-gray-600">Penyambungan dan perbaikan kabel dengan presisi</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3 text-gray-700">
+                  <div class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="bi bi-check2 text-primary-600 font-bold text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Pengurusan SLO & Perizinan</h4>
+                    <p class="text-sm text-gray-600">Bantuan lengkap untuk sertifikasi dan perizinan</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sub Services Grid -->
+          <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up">
+            <div class="service-detail-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <i class="bi bi-building text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="font-display font-bold text-gray-900 mb-2">Building Installation</h4>
+              <p class="text-sm text-gray-600">Instalasi komplet untuk gedung komersial dan pabrik</p>
+            </div>
+
+            <div class="service-detail-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <i class="bi bi-plugin text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="font-display font-bold text-gray-900 mb-2">Cable Jointing</h4>
+              <p class="text-sm text-gray-600">Penyambungan kabel 20kV dengan teknologi terkini</p>
+            </div>
+
+            <div class="service-detail-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <i class="bi bi-lightbulb text-primary-600 text-xl"></i>
+              </div>
+              <h4 class="font-display font-bold text-gray-900 mb-2">Lighting Solutions</h4>
+              <p class="text-sm text-gray-600">Pengadaan lampu LED dan sistem penerangan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-4">
+            <i class="bi bi-diagram-3 text-primary-600"></i>
+            <span class="text-primary-700 text-sm font-semibold">Our Process</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+            Alur Kerja
+            <span class="gradient-text">Profesional</span>
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Proses kerja sistematis untuk memastikan hasil optimal di setiap proyek
+          </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto">
+          <div class="grid md:grid-cols-4 gap-6">
+            <!-- Step 1 -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+              <div class="relative mx-auto w-20 h-20 mb-6">
+                <div class="absolute inset-0 bg-primary-500 rounded-full blur-xl opacity-30"></div>
+                <div class="relative w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold text-2xl">1</span>
+                </div>
+              </div>
+              <h3 class="font-display font-bold text-gray-900 mb-2">Konsultasi</h3>
+              <p class="text-sm text-gray-600">Analisis kebutuhan dan survei lokasi</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+              <div class="relative mx-auto w-20 h-20 mb-6">
+                <div class="absolute inset-0 bg-primary-500 rounded-full blur-xl opacity-30"></div>
+                <div class="relative w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold text-2xl">2</span>
+                </div>
+              </div>
+              <h3 class="font-display font-bold text-gray-900 mb-2">Perencanaan</h3>
+              <p class="text-sm text-gray-600">Design dan estimasi biaya detail</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+              <div class="relative mx-auto w-20 h-20 mb-6">
+                <div class="absolute inset-0 bg-primary-500 rounded-full blur-xl opacity-30"></div>
+                <div class="relative w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold text-2xl">3</span>
+                </div>
+              </div>
+              <h3 class="font-display font-bold text-gray-900 mb-2">Eksekusi</h3>
+              <p class="text-sm text-gray-600">Pelaksanaan proyek oleh tim ahli</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+              <div class="relative mx-auto w-20 h-20 mb-6">
+                <div class="absolute inset-0 bg-primary-500 rounded-full blur-xl opacity-30"></div>
+                <div class="relative w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold text-2xl">4</span>
+                </div>
+              </div>
+              <h3 class="font-display font-bold text-gray-900 mb-2">Serah Terima</h3>
+              <p class="text-sm text-gray-600">Testing, commissioning & dokumentasi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary-600 to-primary-800 relative overflow-hidden">
+      <div class="absolute inset-0 bg-pattern opacity-10"></div>
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+            Butuh Konsultasi untuk Proyek Anda?
+          </h2>
+          <p class="text-lg md:text-xl text-primary-100 mb-8 leading-relaxed">
+            Tim ahli kami siap membantu merencanakan dan melaksanakan proyek electrical engineering Anda dengan standar kualitas tertinggi.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="px-8 py-4 bg-white text-primary-600 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
+              <span class="flex items-center justify-center space-x-2">
+                <span>Hubungi Kami Sekarang</span>
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+            <a href="portfolio.html" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary-600 transition-all duration-300">
+              <span class="flex items-center justify-center space-x-2">
+                <span>Lihat Portfolio</span>
+                <i class="bi bi-grid"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 text-white py-12 relative overflow-hidden">
+    <div class="absolute inset-0 bg-pattern opacity-5"></div>
+    <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <!-- Company Info -->
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="asset/image.png" alt="Logo PT. LAIASACH" class="h-12 w-auto object-contain">
+            <div>
+              <div class="font-display font-bold text-lg leading-tight">PT. LAIASACH</div>
+              <div class="text-primary-400 text-xs font-medium">TEKNO INDONESIA</div>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Solusi electrical engineering terpercaya dengan standar internasional untuk industri Anda.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-display font-bold text-lg mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html#hero" class="text-gray-400 hover:text-primary-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-primary-400 transition-colors">About Us</a></li>
+            <li><a href="services.html" class="text-primary-400">Services</a></li>
+            <li><a href="portfolio.html" class="text-gray-400 hover:text-primary-400 transition-colors">Portfolio</a></li>
+            <li><a href="team.html" class="text-gray-400 hover:text-primary-400 transition-colors">Team</a></li>
+            <li><a href="Contact.html" class="text-gray-400 hover:text-primary-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="font-display font-bold text-lg mb-4">Contact Info</h3>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-start space-x-3">
+              <i class="bi bi-geo-alt-fill text-primary-400 mt-1 flex-shrink-0"></i>
+              <span>Jl. Perak Timur 512 Blok G-7, Surabaya</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <i class="bi bi-telephone-fill text-primary-400 mt-1 flex-shrink-0"></i>
+              <span>+62 878-6175-8001</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <i class="bi bi-envelope-fill text-primary-400 mt-1 flex-shrink-0"></i>
+              <span>Laiasachteknoindo@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="text-gray-500 text-sm">
+          © 2023 <span class="font-semibold text-white">PT. Laiasach Tekno Indonesia</span>. All Rights Reserved.
+        </p>
+        <p class="text-gray-600 text-xs mt-2 italic">
+          Kepuasan Pelanggan Adalah Kepuasan Kami
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scroll to Top -->
+  <a href="#" id="scroll-top" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 opacity-0 invisible z-50">
+    <i class="bi bi-arrow-up-short text-2xl font-bold"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100,
+      delay: 0,
+    });
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.classList.add('bg-dark-900/95', 'backdrop-blur-lg', 'shadow-strong');
+      } else {
+        header.classList.remove('bg-dark-900/95', 'backdrop-blur-lg', 'shadow-strong');
+      }
+
+      lastScroll = currentScroll;
+    });
+
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // Scroll to Top Button
+    const scrollTopBtn = document.getElementById('scroll-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 400) {
+        scrollTopBtn.classList.remove('opacity-0', 'invisible');
+        scrollTopBtn.classList.add('opacity-100', 'visible');
+      } else {
+        scrollTopBtn.classList.add('opacity-0', 'invisible');
+        scrollTopBtn.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    // Smooth Scroll for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = 80;
+          const targetPosition = target.offsetTop - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Active Navigation on Scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('text-white');
+        link.classList.add('text-white/60');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('text-white');
+          link.classList.remove('text-white/60');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

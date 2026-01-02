@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="icon" type="image/svg+xml" href="asset/image.png" />
+  <title>PT. Laiasach Tekno Indonesia</title>
+  <meta name="description" content="PT. Laiasach Tekno Indonesia - Solusi lengkap kelistrikan industri, pemeliharaan transformator, instalasi panel, dan instalasi tegangan menengah">
+  <meta name="keywords" content="electrical, transformator, panel listrik, instalasi industri, surabaya">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#e6f7ff',
+              100: '#bae7ff',
+              200: '#91d5ff',
+              300: '#69c0ff',
+              400: '#40a9ff',
+              500: '#1890ff',
+              600: '#096dd9',
+              700: '#0050b3',
+              800: '#003a8c',
+              900: '#002766',
+            },
+            accent: {
+              500: '#ff6b35',
+              600: '#ff5722',
+            },
+            dark: {
+              800: '#1a1a2e',
+              900: '#0f0f1e',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+            'medium': '0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.08)',
+            'strong': '0 10px 40px -10px rgba(0, 0, 0, 0.2), 0 20px 50px -10px rgba(0, 0, 0, 0.15)',
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Smooth Animations */
+    * {
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #1890ff 0%, #096dd9 100%);
+      border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #40a9ff 0%, #1890ff 100%);
+    }
+
+    /* Hero Gradient Overlay */
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(15, 15, 30, 0.9) 50%, rgba(0, 80, 179, 0.85) 100%);
+    }
+
+    /* Animated Background Pattern */
+    .bg-pattern {
+      background-image: 
+        linear-gradient(30deg, rgba(24, 144, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(24, 144, 255, 0.03) 87.5%, rgba(24, 144, 255, 0.03)),
+        linear-gradient(150deg, rgba(24, 144, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(24, 144, 255, 0.03) 87.5%, rgba(24, 144, 255, 0.03)),
+        linear-gradient(30deg, rgba(24, 144, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(24, 144, 255, 0.03) 87.5%, rgba(24, 144, 255, 0.03)),
+        linear-gradient(150deg, rgba(24, 144, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(24, 144, 255, 0.03) 87.5%, rgba(24, 144, 255, 0.03));
+      background-size: 80px 140px;
+      background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+    }
+
+    /* Glass Effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Button Hover Effects */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+      transition: left 0.3s ease;
+    }
+
+    .btn-primary:hover::before {
+      left: 0;
+    }
+
+    .btn-primary span {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Service Card Hover */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-12px);
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(24, 144, 255, 0.05) 0%, rgba(9, 109, 217, 0.05) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 1rem;
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Icon Float Animation */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Pulse Animation */
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.8);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.3);
+        opacity: 0;
+      }
+    }
+
+    .pulse-ring {
+      animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    /* Mobile Menu Slide */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    /* Stats Counter Animation */
+    .stats-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stats-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .stats-card:hover::after {
+      left: 100%;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header/Navigation -->
+  <header id="header" class="fixed w-full top-0 z-50 transition-all duration-500">
+    <nav class="container mx-auto px-4 lg:px-8 xl:px-12">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="relative w-12 h-12 flex-shrink-0">
+            <img src="asset/image.png" 
+                alt="Logo" 
+                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+          </div>
+
+          <div class="leading-tight">
+            <div class="text-white font-bold text-xl tracking-tight">
+              PT. LAIASACH TEKNO INDONESIA
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center space-x-1">
+          <a href="#hero" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Home</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="About.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>About</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Services.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Services</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Portfolio.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Portfolio</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Team.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Team</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Contact.html" class="ml-4 px-6 py-2.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+            Contact Us
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
+          <i class="bi bi-list text-white text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl z-50 lg:hidden">
+      <div class="p-6">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="text-xl font-bold text-gray-900">Menu</h3>
+          <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="bi bi-x text-gray-900 text-3xl"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col space-y-2">
+          <a href="#hero" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="About.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">About</a>
+          <a href="Services.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Services</a>
+          <a href="Portfolio.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Portfolio</a>
+          <a href="Team.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Team</a>
+          <a href="Contact.html" class="mt-4 px-4 py-3 bg-primary-500 text-white text-center font-semibold rounded-lg hover:bg-primary-600 transition-colors">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden pt-20">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&q=80" 
+             alt="Our Team" 
+             class="w-full h-full object-cover">
+        <div class="hero-gradient absolute inset-0"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10 py-20">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6" data-aos="fade-up">
+            <i class="bi bi-people text-primary-300"></i>
+            <span class="text-primary-200 text-sm font-semibold tracking-wide">Meet Our Team</span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+            Tim Profesional
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-500">
+              Bersertifikat
+            </span>
+          </h1>
+          
+          <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            Didukung oleh tenaga ahli yang kompeten dan berpengalaman di bidang electrical engineering dengan sertifikasi internasional
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-4">
+            <i class="bi bi-star text-primary-600"></i>
+            <span class="text-primary-700 text-sm font-semibold">Leadership</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+            Pimpinan
+            <span class="gradient-text">Perusahaan</span>
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Dipimpin oleh profesional berpengalaman dengan visi yang jelas untuk pertumbuhan berkelanjutan
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Director Card -->
+          <div class="team-card bg-gradient-to-br from-primary-50 to-white rounded-3xl shadow-2xl overflow-hidden border-2 border-primary-100" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid md:grid-cols-5 gap-8 p-8 lg:p-12">
+              <div class="md:col-span-2 flex justify-center items-start">
+                <div class="relative">
+                  <div class="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl blur-2xl opacity-30"></div>
+                  <div class="relative w-48 h-48 lg:w-64 lg:h-64 rounded-3xl overflow-hidden border-4 border-white shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&h=800&fit=crop&q=80" 
+                         alt="Asmaul Husna" 
+                         class="w-full h-full object-cover">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="md:col-span-3 flex flex-col justify-center">
+                <div class="mb-4">
+                  <h3 class="text-2xl lg:text-3xl font-display font-bold text-gray-900 mb-2">Asmaul Husna</h3>
+                  <p class="text-primary-600 font-semibold text-lg mb-2">Director</p>
+                  <div class="flex items-center space-x-2 text-sm text-gray-600">
+                    <i class="bi bi-calendar-check"></i>
+                    <span>15+ Years Experience</span>
+                  </div>
+                </div>
+                
+                <p class="text-gray-600 leading-relaxed mb-6">
+                  Memimpin PT. Laiasach Tekno Indonesia dengan dedikasi penuh untuk memberikan solusi electrical engineering terbaik. Dengan pengalaman lebih dari 15 tahun di industri, beliau memastikan setiap proyek diselesaikan dengan standar kualitas tertinggi.
+                </p>
+
+                <div class="space-y-3">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
+                      <i class="bi bi-award text-primary-600"></i>
+                    </div>
+                    <span class="text-sm text-gray-700">Certified Electrical Engineer</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
+                      <i class="bi bi-briefcase text-primary-600"></i>
+                    </div>
+                    <span class="text-sm text-gray-700">100+ Projects Completed</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
+                      <i class="bi bi-telephone text-primary-600"></i>
+                    </div>
+                    <a href="tel:+6287861758001" class="text-sm text-primary-600 hover:text-primary-700 font-medium">+62 878-6175-8001</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Team Section -->
+    <section class="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-4">
+            <i class="bi bi-people-fill text-primary-600"></i>
+            <span class="text-primary-700 text-sm font-semibold">Core Team</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+            Tim
+            <span class="gradient-text">Ahli</span>
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Para profesional bersertifikat dengan keahlian khusus di bidangnya
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Team Member 1 -->
+          <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary-200 transition-all" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-64 overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&h=800&fit=crop&q=80" 
+                   alt="Team Member 1" 
+                   class="team-img absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-1">Engineering Team Lead</h3>
+              <p class="text-primary-600 font-semibold mb-4">Senior Electrical Engineer</p>
+              <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                Memimpin tim engineering dengan keahlian dalam desain dan implementasi sistem kelistrikan industri.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">Certified</span>
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">10+ Years</span>
+              </div>
+              <div class="pt-4 border-t border-gray-100">
+                <div class="text-xs text-gray-500 mb-2">Specialized in:</div>
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs text-gray-700">• Power Systems</span>
+                  <span class="text-xs text-gray-700">• Installation</span>
+                  <span class="text-xs text-gray-700">• Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary-200 transition-all" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-64 overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&h=800&fit=crop&q=80" 
+                   alt="Team Member 1" 
+                   class="team-img absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-1">Transformer Specialist</h3>
+              <p class="text-primary-600 font-semibold mb-4">Technical Expert</p>
+              <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                Ahli dalam pemeliharaan, rewinding, dan pengadaan transformator dengan presisi tinggi.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">Expert</span>
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">12+ Years</span>
+              </div>
+              <div class="pt-4 border-t border-gray-100">
+                <div class="text-xs text-gray-500 mb-2">Specialized in:</div>
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs text-gray-700">• Transformers</span>
+                  <span class="text-xs text-gray-700">• Rewinding</span>
+                  <span class="text-xs text-gray-700">• Testing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary-200 transition-all" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative h-64 overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&h=800&fit=crop&q=80" 
+                   alt="Team Member 1" 
+                   class="team-img absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-1">Panel Systems Expert</h3>
+              <p class="text-primary-600 font-semibold mb-4">Senior Technician</p>
+              <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                Spesialis dalam desain, perakitan, dan maintenance panel listrik untuk berbagai aplikasi industri.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">Certified</span>
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">8+ Years</span>
+              </div>
+              <div class="pt-4 border-t border-gray-100">
+                <div class="text-xs text-gray-500 mb-2">Specialized in:</div>
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs text-gray-700">• Panel Design</span>
+                  <span class="text-xs text-gray-700">• Assembly</span>
+                  <span class="text-xs text-gray-700">• Testing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary-200 transition-all" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-64 overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&h=800&fit=crop&q=80" 
+                   alt="Team Member 1" 
+                   class="team-img absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-1">Installation Supervisor</h3>
+              <p class="text-primary-600 font-semibold mb-4">Field Operations</p>
+              <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                Mengawasi instalasi kelistrikan di lapangan dengan fokus pada keamanan dan kualitas kerja.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">Supervisor</span>
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">10+ Years</span>
+              </div>
+              <div class="pt-4 border-t border-gray-100">
+                <div class="text-xs text-gray-500 mb-2">Specialized in:</div>
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs text-gray-700">• Installation</span>
+                  <span class="text-xs text-gray-700">• Supervision</span>
+                  <span class="text-xs text-gray-700">• Safety</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 5 -->
+          <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary-200 transition-all" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-64 overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&h=800&fit=crop&q=80" 
+                   alt="Team Member 1" 
+                   class="team-img absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-1">Quality Control Manager</h3>
+              <p class="text-primary-600 font-semibold mb-4">QC Specialist</p>
+              <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                Memastikan setiap proyek memenuhi standar kualitas internasional dengan testing menyeluruh.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">Certified</span>
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">9+ Years</span>
+              </div>
+              <div class="pt-4 border-t border-gray-100">
+                <div class="text-xs text-gray-500 mb-2">Specialized in:</div>
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs text-gray-700">• Quality Assurance</span>
+                  <span class="text-xs text-gray-700">• Testing</span>
+                  <span class="text-xs text-gray-700">• Standards</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 6 -->
+          <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary-200 transition-all" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative h-64 overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&h=800&fit=crop&q=80" 
+                   alt="Team Member 1" 
+                   class="team-img absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-1">Maintenance Team Lead</h3>
+              <p class="text-primary-600 font-semibold mb-4">Service Manager</p>
+              <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                Mengelola tim maintenance untuk memastikan operasional sistem kelistrikan klien berjalan optimal.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">Manager</span>
+                <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">11+ Years</span>
+              </div>
+              <div class="pt-4 border-t border-gray-100">
+                <div class="text-xs text-gray-500 mb-2">Specialized in:</div>
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-xs text-gray-700">• Maintenance</span>
+                  <span class="text-xs text-gray-700">• Troubleshooting</span>
+                  <span class="text-xs text-gray-700">• Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Team Section -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-4">
+            <i class="bi bi-tools text-primary-600"></i>
+            <span class="text-primary-700 text-sm font-semibold">Technical Team</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+            Tim
+            <span class="gradient-text">Teknisi</span>
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Didukung oleh 20+ teknisi bersertifikat yang siap menangani berbagai kebutuhan teknis
+          </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Technical Team Category 1 -->
+            <div class="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-8 shadow-lg border border-primary-100" data-aos="fade-right" data-aos-delay="100">
+              <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6">
+                <i class="bi bi-wrench-adjustable text-white text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-4">Electrical Technicians</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                10+ teknisi listrik bersertifikat dengan keahlian dalam instalasi, maintenance, dan troubleshooting sistem kelistrikan industri.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-primary-500"></i>
+                  <span class="text-sm text-gray-700">Installation Experts</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-primary-500"></i>
+                  <span class="text-sm text-gray-700">Maintenance Specialists</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-primary-500"></i>
+                  <span class="text-sm text-gray-700">Troubleshooting Experts</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Technical Team Category 2 -->
+            <div class="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg border border-orange-100" data-aos="fade-left" data-aos-delay="100">
+              <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6">
+                <i class="bi bi-gear text-white text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-4">Field Engineers</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                8+ field engineer dengan pengalaman dalam commissioning, testing, dan implementasi proyek di lapangan.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-accent-500"></i>
+                  <span class="text-sm text-gray-700">Commissioning Specialists</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-accent-500"></i>
+                  <span class="text-sm text-gray-700">Testing & Inspection</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-accent-500"></i>
+                  <span class="text-sm text-gray-700">On-Site Implementation</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Technical Team Category 3 -->
+            <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg border border-blue-100" data-aos="fade-right" data-aos-delay="200">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <i class="bi bi-cpu text-white text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-4">Panel Assembly Team</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Tim khusus untuk perakitan panel listrik dengan standar internasional dan quality control ketat.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-blue-500"></i>
+                  <span class="text-sm text-gray-700">Panel Assembly Experts</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-blue-500"></i>
+                  <span class="text-sm text-gray-700">Wiring Specialists</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-blue-500"></i>
+                  <span class="text-sm text-gray-700">Quality Inspectors</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Technical Team Category 4 -->
+            <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg border border-green-100" data-aos="fade-left" data-aos-delay="200">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                <i class="bi bi-shield-check text-white text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-4">Safety & Compliance</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Tim khusus yang memastikan semua pekerjaan sesuai dengan standar K3 dan regulasi yang berlaku.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-green-500"></i>
+                  <span class="text-sm text-gray-700">Safety Officers</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-green-500"></i>
+                  <span class="text-sm text-gray-700">Compliance Auditors</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="bi bi-check-circle-fill text-green-500"></i>
+                  <span class="text-sm text-gray-700">Documentation Team</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Team CTA -->
+    <section class="py-20 bg-gradient-to-br from-primary-600 to-primary-800 relative overflow-hidden">
+      <div class="absolute inset-0 bg-pattern opacity-10"></div>
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+            Bergabung dengan Tim Kami
+          </h2>
+          <p class="text-lg md:text-xl text-primary-100 mb-8 leading-relaxed">
+            Kami selalu mencari profesional berbakat untuk bergabung dengan tim kami. Jika Anda memiliki passion di bidang electrical engineering, mari berkembang bersama kami.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="px-8 py-4 bg-white text-primary-600 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
+              <span class="flex items-center justify-center space-x-2">
+                <span>Kirim Lamaran</span>
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+            <a href="about.html" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary-600 transition-all duration-300">
+              <span class="flex items-center justify-center space-x-2">
+                <span>Tentang Kami</span>
+                <i class="bi bi-info-circle"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 text-white py-12 relative overflow-hidden">
+    <div class="absolute inset-0 bg-pattern opacity-5"></div>
+    <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <!-- Company Info -->
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="asset/image.png" alt="Logo PT. LAIASACH" class="h-12 w-auto object-contain">
+            <div>
+              <div class="font-display font-bold text-lg leading-tight">PT. LAIASACH</div>
+              <div class="text-primary-400 text-xs font-medium">TEKNO INDONESIA</div>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Solusi electrical engineering terpercaya dengan standar internasional untuk industri Anda.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-display font-bold text-lg mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html#hero" class="text-gray-400 hover:text-primary-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-primary-400 transition-colors">About Us</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-primary-400 transition-colors">Services</a></li>
+            <li><a href="portfolio.html" class="text-gray-400 hover:text-primary-400 transition-colors">Portfolio</a></li>
+            <li><a href="Team.html" class="text-primary-400">Team</a></li>
+            <li><a href="Contact.html" class="text-gray-400 hover:text-primary-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="font-display font-bold text-lg mb-4">Contact Info</h3>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-start space-x-3">
+              <i class="bi bi-geo-alt-fill text-primary-400 mt-1 flex-shrink-0"></i>
+              <span>Jl. Perak Timur 512 Blok G-7, Surabaya</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <i class="bi bi-telephone-fill text-primary-400 mt-1 flex-shrink-0"></i>
+              <span>+62 878-6175-8001</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <i class="bi bi-envelope-fill text-primary-400 mt-1 flex-shrink-0"></i>
+              <span>Laiasachteknoindo@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="text-gray-500 text-sm">
+          © 2023 <span class="font-semibold text-white">PT. Laiasach Tekno Indonesia</span>. All Rights Reserved.
+        </p>
+        <p class="text-gray-600 text-xs mt-2 italic">
+          Kepuasan Pelanggan Adalah Kepuasan Kami
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scroll to Top -->
+  <a href="#" id="scroll-top" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 opacity-0 invisible z-50">
+    <i class="bi bi-arrow-up-short text-2xl font-bold"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100,
+      delay: 0,
+    });
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.classList.add('bg-dark-900/95', 'backdrop-blur-lg', 'shadow-strong');
+      } else {
+        header.classList.remove('bg-dark-900/95', 'backdrop-blur-lg', 'shadow-strong');
+      }
+
+      lastScroll = currentScroll;
+    });
+
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // Scroll to Top Button
+    const scrollTopBtn = document.getElementById('scroll-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 400) {
+        scrollTopBtn.classList.remove('opacity-0', 'invisible');
+        scrollTopBtn.classList.add('opacity-100', 'visible');
+      } else {
+        scrollTopBtn.classList.add('opacity-0', 'invisible');
+        scrollTopBtn.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    // Smooth Scroll for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = 80;
+          const targetPosition = target.offsetTop - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Active Navigation on Scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('text-white');
+        link.classList.add('text-white/60');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('text-white');
+          link.classList.remove('text-white/60');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

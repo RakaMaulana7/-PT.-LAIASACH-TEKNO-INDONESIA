@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="icon" type="image/svg+xml" href="asset/image.png" />
+  <title>PT. Laiasach Tekno Indonesia</title>
+  <meta name="description" content="Portfolio proyek electrical engineering PT. Laiasach Tekno Indonesia - Dipercaya oleh 20+ perusahaan terkemuka">
+  <meta name="keywords" content="portfolio, proyek, electrical, transformator, panel listrik, client, surabaya">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#e6f7ff',
+              100: '#bae7ff',
+              200: '#91d5ff',
+              300: '#69c0ff',
+              400: '#40a9ff',
+              500: '#1890ff',
+              600: '#096dd9',
+              700: '#0050b3',
+              800: '#003a8c',
+              900: '#002766',
+            },
+            accent: {
+              500: '#ff6b35',
+              600: '#ff5722',
+            },
+            dark: {
+              800: '#1a1a2e',
+              900: '#0f0f1e',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #1890ff 0%, #096dd9 100%);
+      border-radius: 5px;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(15, 15, 30, 0.9) 50%, rgba(0, 80, 179, 0.85) 100%);
+    }
+
+    .bg-pattern {
+      background-image: 
+        linear-gradient(30deg, rgba(24, 144, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(24, 144, 255, 0.03) 87.5%, rgba(24, 144, 255, 0.03)),
+        linear-gradient(150deg, rgba(24, 144, 255, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(24, 144, 255, 0.03) 87.5%, rgba(24, 144, 255, 0.03));
+      background-size: 80px 140px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    .portfolio-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+      color: white;
+    }
+
+    .portfolio-item {
+      display: block;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .portfolio-item.hide {
+      display: none;
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header/Navigation -->
+  <header id="header" class="fixed w-full top-0 z-50 transition-all duration-500">
+    <nav class="container mx-auto px-4 lg:px-8 xl:px-12">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="relative w-12 h-12 flex-shrink-0">
+            <img src="asset/image.png" 
+                alt="Logo" 
+                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+          </div>
+
+          <div class="leading-tight">
+            <div class="text-white font-bold text-xl tracking-tight">
+              PT. LAIASACH TEKNO INDONESIA
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center space-x-1">
+          <a href="index.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Home</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="About.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>About</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Services.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Services</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Portfolio.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Portfolio</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Team.html" class="nav-link px-4 py-2 text-white/80 hover:text-white font-medium transition-colors duration-300 relative group">
+            <span>Team</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="Contact.html" class="ml-4 px-6 py-2.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+            Contact Us
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
+          <i class="bi bi-list text-white text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl z-50 lg:hidden">
+      <div class="p-6">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="text-xl font-bold text-gray-900">Menu</h3>
+          <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="bi bi-x text-gray-900 text-3xl"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col space-y-2">
+          <a href="index.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="About.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">About</a>
+          <a href="Services.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Services</a>
+          <a href="Portfolio.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Portfolio</a>
+          <a href="Team.html" class="px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg font-medium transition-colors">Team</a>
+          <a href="Contact.html" class="mt-4 px-4 py-3 bg-primary-500 text-white text-center font-semibold rounded-lg hover:bg-primary-600 transition-colors">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden pt-20">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80" 
+             alt="Our Portfolio" 
+             class="w-full h-full object-cover">
+        <div class="hero-gradient absolute inset-0"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10 py-20">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6" data-aos="fade-up">
+            <i class="bi bi-briefcase text-primary-300"></i>
+            <span class="text-primary-200 text-sm font-semibold tracking-wide">Our Portfolio</span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+            Proyek yang Telah
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-500">
+              Kami Kerjakan
+            </span>
+          </h1>
+          
+          <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            Dipercaya oleh 20+ perusahaan terkemuka dengan 100+ proyek sukses yang telah diselesaikan
+          </p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-8 mt-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <div class="text-4xl font-bold text-white mb-2">100+</div>
+              <div class="text-sm text-gray-300">Projects</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-white mb-2">20+</div>
+              <div class="text-sm text-gray-300">Clients</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-white mb-2">15+</div>
+              <div class="text-sm text-gray-300">Years</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-12 bg-white sticky top-20 z-40 border-b border-gray-200">
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12">
+        <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up">
+          <button class="filter-btn active px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 text-white" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-btn px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200" data-filter="transformator">
+            Transformator
+          </button>
+          <button class="filter-btn px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200" data-filter="panel">
+            Panel Listrik
+          </button>
+          <button class="filter-btn px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200" data-filter="instalasi">
+            Instalasi
+          </button>
+          <button class="filter-btn px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200" data-filter="maintenance">
+            Maintenance
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Major Projects Section -->
+    <section class="py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-4">
+            <i class="bi bi-star text-primary-600"></i>
+            <span class="text-primary-700 text-sm font-semibold">Major Projects</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+            Proyek
+            <span class="gradient-text">Unggulan</span>
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Showcase proyek-proyek besar yang telah kami tangani dengan sukses
+          </p>
+        </div>
+
+        <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="portfolio-card portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-category="transformator maintenance" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-64 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden group">
+              <div class="absolute inset-0 bg-dark-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i class="bi bi-eye text-white text-4xl"></i>
+              </div>
+              <img src="asset/PT. ERATEX DJAJA Tbk.jpg" 
+                   alt="Project" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Completed</span>
+                <span class="text-xs text-gray-500">2023</span>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-2">PT. ERATEX DJADJA Tbk</h3>
+              <p class="text-sm text-gray-600 mb-4">Maintenance Transformator & Rewinding Trafo 2500 kVA</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Transformator</span>
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Maintenance</span>
+              </div>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Rewinding Trafo 2500 kVA</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Pengadaan Cubicle 20 kV</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Reinstalasi Kabel 20 kV</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="portfolio-card portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-category="transformator" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-64 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden group">
+              <div class="absolute inset-0 bg-dark-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i class="bi bi-eye text-white text-4xl"></i>
+              </div>
+              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&h=400&fit=crop&q=80" 
+                   alt="Project" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Completed</span>
+                <span class="text-xs text-gray-500">2023</span>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-2">PT. INDIRATEX SPINDO</h3>
+              <p class="text-sm text-gray-600 mb-4">Pengadaan Transformator Trafindo 1000 kVA</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Transformator</span>
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Supply</span>
+              </div>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Pengadaan Trafo 1000 kVA</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Maintenance Trafo & Cubicle</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="portfolio-card portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-category="panel instalasi" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative h-64 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden group">
+              <div class="absolute inset-0 bg-dark-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i class="bi bi-eye text-white text-4xl"></i>
+              </div>
+              <img src="asset/PT. BOILER MANUFACTURE.jpg" 
+                   alt="Project" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Completed</span>
+                <span class="text-xs text-gray-500">2023</span>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-2">PT. BOILER MANUFACTURE</h3>
+              <p class="text-sm text-gray-600 mb-4">Panel Capacitor Bank & Reinstalasi Kabel</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Panel</span>
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Instalasi</span>
+              </div>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Pengadaan Panel Capacitor Bank</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Reinstalasi Kabel 20 kV</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="portfolio-card portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-category="panel instalasi" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-64 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden group">
+              <div class="absolute inset-0 bg-dark-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i class="bi bi-eye text-white text-4xl"></i>
+              </div>
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop&q=80" 
+                   alt="Project" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Completed</span>
+                <span class="text-xs text-gray-500">2022</span>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-2">CV. SIDORAYA UTAMA</h3>
+              <p class="text-sm text-gray-600 mb-4">Pengadaan Panel LVMDP & Complete Installation</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Panel</span>
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Instalasi</span>
+              </div>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Pengadaan Panel LVMDP</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Pemasangan Trafo & Cubicle</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Penarikan Kabel TM & TR</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="portfolio-card portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-category="maintenance transformator" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-64 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden group">
+              <div class="absolute inset-0 bg-dark-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i class="bi bi-eye text-white text-4xl"></i>
+              </div>
+              <img src="asset/PT. Mitra Pinasthika Mulia.png" 
+                   alt="Project" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Completed</span>
+                <span class="text-xs text-gray-500">2022</span>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-2">PT. Mitra Phinasthika Mulia</h3>
+              <p class="text-sm text-gray-600 mb-4">Maintenance Transformator & Cubicle Regular</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Maintenance</span>
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Transformator</span>
+              </div>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Maintenance Rutin Transformator</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Maintenance Cubicle 20 kV</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="portfolio-card portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-category="panel maintenance" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative h-64 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden group">
+              <div class="absolute inset-0 bg-dark-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <i class="bi bi-eye text-white text-4xl"></i>
+              </div>
+              <img src="asset/PT. Veolia Services Indonesia.jpeg" 
+                   alt="Project" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Completed</span>
+                <span class="text-xs text-gray-500">2022</span>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-2">PT. Veolia Services Indonesia</h3>
+              <p class="text-sm text-gray-600 mb-4">Panel Distribution & Preventive Maintenance</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Panel</span>
+                <span class="px-2 py-1 bg-primary-50 text-primary-700 text-xs rounded">Maintenance</span>
+              </div>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Preventive Maintenance Panel</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <i class="bi bi-check-circle-fill text-primary-500 mt-0.5 flex-shrink-0"></i>
+                  <span>Upgrading System Distribution</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maintenance Clients Section -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-4">
+            <i class="bi bi-tools text-primary-600"></i>
+            <span class="text-primary-700 text-sm font-semibold">Maintenance Clients</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+            Klien
+            <span class="gradient-text">Maintenance Rutin</span>
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            15+ perusahaan yang mempercayakan maintenance electrical system mereka kepada kami
+          </p>
+        </div>
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+      
+      <div class="group relative h-64 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+        <img src="asset/PT. Malindo Feedmill.jpg" alt="Industrial Plant" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 right-0 p-6 backdrop-blur-[2px]">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center text-white">
+              <i class="bi bi-building text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-bold text-lg leading-tight">PT. Malindo Feedmill</h4>
+              <p class="text-primary-300 text-xs font-medium uppercase tracking-widest mt-1">Maintenance Contract</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative h-64 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+        <img src="asset/Universitas Politeknik Malang.jpg" alt="University" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 right-0 p-6 backdrop-blur-[2px]">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center text-white">
+              <i class="bi bi-mortarboard text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-bold text-lg leading-tight">Polinema Malang</h4>
+              <p class="text-primary-300 text-xs font-medium uppercase tracking-widest mt-1">Facility Management</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative h-64 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
+        <img src="asset/PT. Sinarmas Agro Resources.jpg" alt="Plant Maintenance" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 right-0 p-6 backdrop-blur-[2px]">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center text-white">
+              <i class="bi bi-factory text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-bold text-lg leading-tight">PT. Sinarmas Agro</h4>
+              <p class="text-primary-300 text-xs font-medium uppercase tracking-widest mt-1">Plant Maintenance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative h-64 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+        <img src="asset/PT. Japfa Comfeed Indonesia.jpg" alt="Electrical" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 right-0 p-6 backdrop-blur-[2px]">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center text-white">
+              <i class="bi bi-lightning-charge text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-bold text-lg leading-tight">PT. Japfa Comfeed</h4>
+              <p class="text-primary-300 text-xs font-medium uppercase tracking-widest mt-1">Electrical Service</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative h-64 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+        <img src="asset/PT. Charoen Pokphand Indonesia.jpeg" alt="Routine" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 right-0 p-6 backdrop-blur-[2px]">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center text-white">
+              <i class="bi bi-gear-wide-connected text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-bold text-lg leading-tight">PT. Charoen Pokphand</h4>
+              <p class="text-primary-300 text-xs font-medium uppercase tracking-widest mt-1">Routine Services</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative h-64 rounded-3xl overflow-hidden shadow-lg border-2 border-dashed border-primary-300 bg-primary-50 flex items-center justify-center text-center p-6 hover:bg-primary-100 transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex flex-col items-center">
+          <div class="w-16 h-16 bg-primary-500 text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500 mb-4">
+            <i class="bi bi-plus-lg text-3xl"></i>
+          </div>
+          <h4 class="text-secondary font-extrabold text-2xl">10+ Klien</h4>
+          <p class="text-gray-600 font-medium">Lainnya telah mempercayakan sistem kelistrikan mereka kepada kami.</p>
+        </div>
+      </div>
+
+    </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      <div class="bg-pattern absolute inset-0 opacity-30"></div>
+      
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-4">
+            <i class="bi bi-chat-quote text-primary-600"></i>
+            <span class="text-primary-700 text-sm font-semibold">Testimonials</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+            Apa Kata
+            <span class="gradient-text">Klien Kami</span>
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Kepercayaan dan kepuasan klien adalah prioritas utama kami
+          </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center mb-4">
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+            </div>
+            <p class="text-gray-700 italic mb-6 leading-relaxed">
+              "Pelayanan sangat profesional dan hasil pekerjaan memuaskan. Tim teknisi sangat kompeten dan responsif."
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-3">
+                <i class="bi bi-person text-primary-600 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900">Ahmad Sutanto</h4>
+                <p class="text-sm text-gray-600">Plant Manager, PT. Eratex</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center mb-4">
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+            </div>
+            <p class="text-gray-700 italic mb-6 leading-relaxed">
+              "Pengerjaan cepat dan tepat waktu. Harga kompetitif dengan kualitas yang tidak mengecewakan."
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-3">
+                <i class="bi bi-person text-primary-600 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900">Budi Hartono</h4>
+                <p class="text-sm text-gray-600">Electrical Manager, CV. Sidoraya</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-center mb-4">
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+            </div>
+            <p class="text-gray-700 italic mb-6 leading-relaxed">
+              "Support after sales sangat baik. Maintenance rutin selalu tepat jadwal. Sangat recommended!"
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-3">
+                <i class="bi bi-person text-primary-600 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900">Siti Aminah</h4>
+                <p class="text-sm text-gray-600">Facility Head, PT. Veolia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary-600 to-primary-800 relative overflow-hidden">
+      <div class="absolute inset-0 bg-pattern opacity-10"></div>
+      <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+            Ingin Proyek Anda Berikutnya?
+          </h2>
+          <p class="text-lg md:text-xl text-primary-100 mb-8 leading-relaxed">
+            Bergabunglah dengan 20+ perusahaan terkemuka yang telah mempercayakan proyek mereka kepada kami. Mari wujudkan proyek electrical Anda dengan standar kualitas terbaik.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="Contact.html" class="px-8 py-4 bg-white text-primary-600 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
+              <span class="flex items-center justify-center space-x-2">
+                <span>Mulai Proyek Anda</span>
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+            <a href="services.html" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary-600 transition-all duration-300">
+              <span class="flex items-center justify-center space-x-2">
+                <span>Lihat Layanan</span>
+                <i class="bi bi-grid"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 text-white py-12 relative overflow-hidden">
+    <div class="absolute inset-0 bg-pattern opacity-5"></div>
+    <div class="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <!-- Company Info -->
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="asset/image.png" alt="Logo PT. LAIASACH" class="h-12 w-auto object-contain">
+            <div>
+              <div class="font-display font-bold text-lg leading-tight">PT. LAIASACH</div>
+              <div class="text-primary-400 text-xs font-medium">TEKNO INDONESIA</div>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Solusi electrical engineering terpercaya dengan standar internasional untuk industri Anda.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-display font-bold text-lg mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html#hero" class="text-gray-400 hover:text-primary-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-primary-400 transition-colors">About Us</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-primary-400 transition-colors">Services</a></li>
+            <li><a href="portfolio.html" class="text-primary-400">Portfolio</a></li>
+            <li><a href="Team.html" class="text-gray-400 hover:text-primary-400 transition-colors">Team</a></li>
+            <li><a href="Contact.html" class="text-gray-400 hover:text-primary-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="font-display font-bold text-lg mb-4">Contact Info</h3>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-start space-x-3">
+              <i class="bi bi-geo-alt-fill text-primary-400 mt-1 flex-shrink-0"></i>
+              <span>Jl. Perak Timur 512 Blok G-7, Surabaya</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <i class="bi bi-telephone-fill text-primary-400 mt-1 flex-shrink-0"></i>
+              <span>+62 878-6175-8001</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <i class="bi bi-envelope-fill text-primary-400 mt-1 flex-shrink-0"></i>
+              <span>Laiasachteknoindo@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="text-gray-500 text-sm">
+          © 2023 <span class="font-semibold text-white">PT. Laiasach Tekno Indonesia</span>. All Rights Reserved.
+        </p>
+        <p class="text-gray-600 text-xs mt-2 italic">
+          Kepuasan Pelanggan Adalah Kepuasan Kami
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scroll to Top -->
+  <a href="#" id="scroll-top" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 opacity-0 invisible z-50">
+    <i class="bi bi-arrow-up-short text-2xl font-bold"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100,
+    });
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.classList.add('bg-dark-900/95', 'backdrop-blur-lg', 'shadow-strong');
+      } else {
+        header.classList.remove('bg-dark-900/95', 'backdrop-blur-lg', 'shadow-strong');
+      }
+
+      lastScroll = currentScroll;
+    });
+
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // Portfolio Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        
+        // Update active button
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.classList.remove('bg-gradient-to-r', 'from-primary-500', 'to-primary-600', 'text-white');
+          b.classList.add('bg-gray-100', 'text-gray-700');
+        });
+        btn.classList.add('active');
+        btn.classList.add('bg-gradient-to-r', 'from-primary-500', 'to-primary-600', 'text-white');
+        btn.classList.remove('bg-gray-100', 'text-gray-700');
+
+        // Filter items
+        portfolioItems.forEach(item => {
+          if (filter === 'all') {
+            item.classList.remove('hide');
+          } else {
+            const categories = item.getAttribute('data-category').split(' ');
+            if (categories.includes(filter)) {
+              item.classList.remove('hide');
+            } else {
+              item.classList.add('hide');
+            }
+          }
+        });
+      });
+    });
+
+    // Scroll to Top Button
+    const scrollTopBtn = document.getElementById('scroll-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 400) {
+        scrollTopBtn.classList.remove('opacity-0', 'invisible');
+        scrollTopBtn.classList.add('opacity-100', 'visible');
+      } else {
+        scrollTopBtn.classList.add('opacity-0', 'invisible');
+        scrollTopBtn.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = 80;
+          const targetPosition = target.offsetTop - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+        // Active Navigation on Scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('text-white');
+        link.classList.add('text-white/60');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('text-white');
+          link.classList.remove('text-white/60');
+        }
+      });
+    });
+
+  </script>
+
+</body>
+</html>
